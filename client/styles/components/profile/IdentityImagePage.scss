@@ -1,0 +1,74 @@
+@import 'include/flexbox';
+@import 'include/mixins';
+
+.page-identity-image {
+  .check-liveness-text {
+    @include flex;
+    font-size: 15px;
+    text-align: left;
+    color: #2a66c9;
+  }
+
+  .check-liveness-status {
+    width: 10px;
+    color: #ddd;
+  }
+
+  .check-liveness-item.checked {
+    .check-liveness-text {
+      color: #333;
+    }
+
+    .check-liveness-status {
+      font-size: 20px;
+      margin-right: 8px;
+      color: #15b0a3;
+    }
+  }
+
+  .identity-image-container {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    width: 100%;
+    padding: 10px 8px 10px 0;
+
+    .image-front, .image-back {
+      display: block;
+      border: none;
+      background-size: 100% 100%;
+
+      @include breakpoint(small-screen) {
+        width: 140px;
+        height: 84px;
+      }
+    }
+
+    .image-front {
+      background-image: url(~images/idimg_front.png);
+    }
+
+    .image-back {
+      background-image: url(~images/idimg_back.png);
+
+      &.disabled {
+        background-image: url(~images/idimg_back.png);
+      }
+    }
+  }
+}
+
+.idinfo-confirm-container {
+  font-size: 18px;
+  padding: 5px 0;
+
+  .warning {
+    color: #db302e;
+    margin-bottom: 10px;
+  }
+
+  .idinfo-name, .idinfo-idno {
+    font-weight: 500;
+  }
+}

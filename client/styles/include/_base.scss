@@ -1,0 +1,13 @@
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+  line-height: 1.5;
+  color: $color-text;
+  background: $color-bg;
+  overflow: hidden;
+}

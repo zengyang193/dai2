@@ -1,0 +1,12 @@
+{
+  "apps": [{
+    "name": "kaixindai-h5",
+    "script": "./server/main.js",
+    "exec_mode": "fork",
+    "env": {
+      "NODE_ENV": "production",
+      "KXD_RELEASE": "test",
+      "PORT": "4003"
+    }
+  }]
+}

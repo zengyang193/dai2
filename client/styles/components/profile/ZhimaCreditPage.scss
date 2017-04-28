@@ -1,0 +1,35 @@
+.page-zhima-credit {
+  .logo-block {
+    text-align: center;
+  }
+
+  .zhima-credit-logo {
+    display: inline-block;
+    width: 9.75rem;
+    height: 3rem;
+    margin: 0 .5rem;
+    vertical-align: middle;
+    background-image: url(~images/zhima_credit_logo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media only screen and (max-device-width:320px) {
+      width: 6.825rem;
+      height: 2.1rem;
+    }
+  }
+
+  .auth-success-container {
+    text-align: center;
+
+    .indicator {
+      margin: 20px auto;
+      font-size: 80px;
+      color: #15b0a3;
+
+      &.failure {
+        color: #db302e
+      }
+    }
+  }
+}

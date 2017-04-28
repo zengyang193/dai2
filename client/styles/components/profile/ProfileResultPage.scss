@@ -1,0 +1,25 @@
+@import 'include/mixins';
+
+.page-profile-result {
+  .progress-detail {
+    .progress-text {
+      font-size: 60px;
+    }
+
+    .progres-time {
+      font-weight: bold;
+    }
+
+    .ons-icon--ion {
+      vertical-align: inherit;
+    }
+  }
+
+  .status-text {
+    font-size: 18px;
+
+    @include breakpoint(small-screen) {
+      font-size: 15px;
+    }
+  }
+}

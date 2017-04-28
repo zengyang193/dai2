@@ -1,0 +1,197 @@
+@import 'include/flexbox';
+
+.alert-dialog-wechat {
+  .alert-dialog-title {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .alert-mfooter {
+    @include flexbox;
+    @include flex-wrap(nowrap);
+    .alert-dialog-button {
+      color: #9b9b9b;
+    }
+    .alert-dialog-right {
+      border-left: 1px solid #dcdcdc;
+      color: #7183e2;
+    }
+  }
+}
+
+
+.page-payment-result {
+
+  .payment-result-container {
+    background-color: #f7f7f7;
+    height: 100%;
+    text-align: center;
+
+    .payment-success {
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-wrap(nowrap);
+      height: 118px;
+      background-color: white;
+
+      .check-liveness-status {
+        font-size: 41px;
+        margin-right: 10px;
+        margin-top: -10px;
+        color: #15b0a3;
+      }
+      .payment-result-txt {
+        color: #333;
+        font-size: 18px;
+      }
+      .payment-result-sum {
+        font-size: 21px;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .payment-repeat {
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    label {
+      font-size: 15px;
+      color: #db302e;
+    }
+    background-image: url(~images/payment/bg_loan_repeat.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #666;
+    font-size: 15px;
+    display: inline-block;
+    width: 90%;
+    .payment-repeat-txt {
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+    }
+    .payment-repeat-amount {
+      color: #db302e;
+      font-size: 27px;
+      margin-top: 24px;
+      .payment-repeat-realAmount{
+        color: #333;
+        font-size: 17px;
+        label{
+          color: #db302e;
+        }
+      }
+    }
+
+    .payment-privilege-third {
+      margin: 20px 20px 0 20px;
+      @include flexbox;
+      @include justify-content(space-between);
+      @include align-items(center);
+      .payment-privilege-change-container {
+        @include flexbox;
+      }
+      .repayment-privilege-change {
+        color: #2a66c9;
+      }
+      .image-change {
+
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url(~images/payment/icon_change_type.png);
+      }
+    }
+
+    .payment-privilege-get {
+      color: #db302e;
+      font-size: 24px;
+      padding: 8px 0;
+      border-radius: 33px;
+      margin-top: 22px;
+      background: white;
+      border-width: 2px;
+      border-style: solid;
+      width: 80%;
+      margin: 39px auto;
+    }
+  }
+
+  .payment-privilege {
+    text-align: center;
+    label {
+      font-size: 15px;
+      color: #db302e;
+    }
+    .payment-privilege-title {
+      color: white;
+      font-size: 21px;
+      background-image: url(~images/payment/bg_loan_privilege_txt.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      font-weight: bold;
+      display: flex;
+      display: inline-table;
+      padding-top: 30px;
+      padding-bottom: 40px;
+      width: 70%;
+      background-position: center;
+    }
+    .payment-privilege-content {
+      background-image: url(~images/payment/bg_loan_privilege.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      color: #666;
+      font-size: 15px;
+      padding: 34px 27px 40px;
+      display: inline-block;
+      width: 80%;
+      .payment-privilege-first {
+
+        span {
+          font-size: 30px;
+          color: #db302e;
+        }
+      }
+      .payment-privilege-second {
+        color: #333;
+        font-size: 17px;
+        margin-top: 15px;
+      }
+      .payment-privilege-third {
+        margin-top: 20px;
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        .payment-privilege-change-container {
+          @include flexbox;
+        }
+        .repayment-privilege-change {
+          color: #2a66c9;
+        }
+        .image-change {
+
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-image: url(~images/payment/icon_change_frequency.png);
+        }
+      }
+      .payment-privilege-get {
+        font-size: 24px;
+        padding: 8px 0;
+        border-radius: 33px;
+        margin-top: 22px;
+      }
+    }
+
+  }
+}

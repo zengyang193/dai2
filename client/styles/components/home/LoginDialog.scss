@@ -1,0 +1,70 @@
+@import 'include/flexbox';
+@import 'include/mixins';
+
+.dialog {
+  width: 80%;
+}
+
+.button-login {
+  color: #fff;
+  margin-top: 30px;
+  border-radius: 22px;
+  background: linear-gradient(90deg, #ff453c, #db302e);
+  font-size: 16px;
+  height: 40px;
+
+}
+
+.button:disabled, .button[disabled] {
+  opacity: 1;
+}
+
+.button-disabled {
+  background: #e7e7e7;
+}
+
+.input-login {
+  font-size: 16px;
+  color: #333333;
+  border-radius: 22px;
+  border: 1px solid #e7e7e7;
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+
+  input {
+    height: 40px;
+
+    @include placeholder {
+      color: #e2e2e2;
+    }
+  }
+}
+.send-code {
+  margin-top: 0px;
+  width: 250px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.sendcode-div {
+  @include flexbox;
+  margin-top: 20px;
+  height: 40px;
+  @include align-items(center);
+}
+
+.login-title {
+  font-size: 22px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.login-agreement {
+  font-size: 12px;
+  text-align: left;
+  color: #333;
+
+  a {
+    color: #0074ce;
+  }
+}

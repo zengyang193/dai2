@@ -1,0 +1,151 @@
+@import 'include/flexbox';
+
+
+.page-import-progress {
+  .import-progress-container {
+    position: relative;
+    margin: 60px auto 10px;
+    text-align: center;
+
+    ons-progress-circular {
+      width: 200px;
+      height: 200px;
+    }
+
+    .progress-circular__primary {
+      stroke: #15b0a3;
+      stroke-width: 4%;
+    }
+    .progress-circular--determinate > .progress-circular__secondary {
+      stroke: rgb(158, 228, 217);
+      stroke-width: 4%;
+    }
+  }
+
+  .progress-detail {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: #15b0a3;
+
+    .ons-icon--ion {
+      vertical-align: inherit;
+    }
+    .progress-text {
+      font-size: 60px;
+    }
+
+    .progres-time {
+      font-weight: bold;
+    }
+  }
+
+  .progress-result-icon {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin-top: -30px;
+    font-size: 60px;
+
+    .ons-icon--ion {
+      vertical-align: inherit;
+    }
+  }
+
+  .progress-text {
+    height: 60px;
+    margin-top: 60px;
+    line-height: 60px;
+    font-size: 60px;
+  }
+
+  .progress-percent-value {
+    font-size: 60px;
+  }
+
+  .progress-percent-sign {
+    font-size: 30px;
+  }
+
+  .progress-time {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+  .status-text {
+    text-align: center;
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .status-tip {
+    margin-top: 5px;
+    font-size: 15px;
+    text-align: center;
+    color: #888;
+  }
+  .content-block, .action-container {
+    margin-top: 15px;
+    padding: 14px;
+  }
+}
+
+.suc-result-page {
+
+  text-align: center;
+  .imge-suc {
+    width: 148px;
+    margin: auto;
+    height: 148px;
+    margin-top: 80px;
+  }
+  .suc-img-container {
+    color: #15b0a3;
+    position: absolute;
+    margin: auto;
+    margin-top: 140px;
+    width: 100%;
+
+    .checkmark-suc {
+      display: block;
+    }
+    .suc-word {
+
+    }
+  }
+  .bank-name-container {
+    color: #333;
+    font-size: 15px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  .bank-no {
+    color: #333;
+    font-size: 20px;
+    margin-top: 22px;
+    margin-bottom: 60px;
+  }
+  .suc-next{
+    margin: auto;
+    width: 80%;
+  }
+  .repayment-word{
+    color: #333;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  .repayment-amount{
+    color: #333;
+    font-size: 23px;
+    font-weight: bolder;
+  }
+
+}

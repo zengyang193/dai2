@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'kxd-icons';
+  src:  url('~styles/fonts/kxd-icons.eot?reo6v1');
+  src:  url('~styles/fonts/kxd-icons.eot?reo6v1#iefix') format('embedded-opentype'),
+    url('~styles/fonts/kxd-icons.ttf?reo6v1') format('truetype'),
+    url('~styles/fonts/kxd-icons.woff?reo6v1') format('woff'),
+    url('~styles/fonts/kxd-icons.svg?reo6v1#kxd-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="kxd-icon"], [class*=" kxd-icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kxd-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kxd-icon-about-us:before {
+  content: "\e900";
+}
+.kxd-icon-repayment:before {
+  content: "\e901";
+}
+.kxd-icon-checkmark:before {
+  content: "\e902";
+}
+.kxd-icon-alert:before {
+  content: "\e903";
+}
+.kxd-icon-help-outline:before {
+  content: "\e904";
+}
+.kxd-icon-help2-outline:before {
+  content: "\e905";
+}
+.kxd-icon-real-amount:before {
+  content: "\e906";
+}
+.kxd-icon-wallet:before {
+  content: "\e907";
+}
+.kxd-icon-agreement:before {
+  content: "\e908";
+}
+.kxd-icon-cs-service:before {
+  content: "\e909";
+}
+.kxd-icon-settings:before {
+  content: "\e90a";
+}
+.kxd-icon-calendar:before {
+  content: "\e90b";
+}
+.kxd-icon-idcard:before {
+  content: "\e90c";
+}
+.kxd-icon-home:before {
+  content: "\e90d";
+}
+.kxd-icon-home-outline:before {
+  content: "\e90e";
+}
+.kxd-icon-profile:before {
+  content: "\e90f";
+}
+.kxd-icon-profile-outline:before {
+  content: "\e910";
+}
+

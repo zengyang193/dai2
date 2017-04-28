@@ -1,0 +1,12 @@
+@import 'include/flexbox';
+@import 'include/mixins';
+
+.tab-bar-ios {
+  .tabbar {
+    display: none;
+  }
+
+  .tabbar__content {
+    bottom: 0;
+  }
+}

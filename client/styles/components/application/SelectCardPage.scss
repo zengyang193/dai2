@@ -1,0 +1,104 @@
+.page-select-bankcard{
+  background-color: #f2f2f2;
+  .card-list-block {
+    margin: 25px 15px;
+
+    ul {
+      list-style: none;
+      padding:0;
+      margin-bottom: -15px;
+    }
+
+    li {
+      position: relative;
+      border: 1px solid #e7e7e7;
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+
+      &.card-selected {
+        border: 1px solid #db2d2f;
+
+        .select-indicator {
+          display: block;
+        }
+
+        .card-check {
+          display: inline-block;
+          vertical-align: text-bottom;
+          margin-left: .1rem;
+          width: .8rem;
+          height: .8rem;
+          font-size: .8rem;
+        }
+      }
+    }
+
+    .bank-icon-container {
+      overflow: hidden;
+    }
+
+    .select-indicator {
+      display: none;
+      position: absolute;
+      right: .5rem;
+      top: .4rem;
+      font-size: .6rem;
+      color: #ffae00;
+
+      .icon {
+        border: 1px solid #ffae00;
+        padding: 1px;
+        margin-left: 4px;
+        border-radius: 10px;
+      }
+    }
+
+    .bank-info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      -webkit-align-content: center;
+      align-content: center;
+      align-items: center;
+      color: #333333;
+
+    }
+
+    .bank-icon-container {
+      margin-right: 15px;
+    }
+
+    .card-no {
+      padding-left: 57px;
+      color: #333333;
+      font-size: .9rem;
+
+      @media only screen and (max-device-width:320px) {
+        font-size: .9rem;
+      }
+
+      > span {
+        display: inline-block;
+        margin: 0 .2rem;
+      }
+    }
+
+    .button-add-card {
+      color: #2e69c6;
+      text-decoration: none;
+
+      >span {
+        display: block;
+        text-align: center;
+      }
+
+      .plus {
+        font-size: 30px;
+      }
+    }
+  }
+
+}

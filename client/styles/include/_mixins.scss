@@ -1,0 +1,126 @@
+@mixin hairline($position, $color) {
+  @if ($position == bottom or $position == right) {
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: $color;
+      display: block;
+      z-index: 15;
+
+      @if ($position == bottom) {
+        left: auto;
+        bottom: 0;
+        right: 0;
+        top: auto;
+        height: 1px;
+        width: 100%;
+        transform-origin: 50% 100%;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+          transform: scaleY(0.5);
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+          transform: scaleY(0.33);
+        }
+      } @else if ($position == right) {
+        left: 0;
+        bottom: 0;
+        right: auto;
+        top: auto;
+        width: 1px;
+        height: 100%;
+        transform-origin: 100% 50%;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+          transform: scaleX(0.5);
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+          transform: scaleX(0.33);
+        }
+      }
+    }
+  }
+  @if ($position == top or $position == left) {
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: $color;
+      display: block;
+      z-index: 15;
+
+      @if ($position == left) {
+        left: 0;
+        top: 0;
+        bottom: auto;
+        right: auto;
+        width: 1px;
+        height: 100%;
+        transform-origin: 0% 50%;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+          transform: scaleX(0.5);
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+          transform: scaleX(0.33);
+        }
+      } @else if ($position == top) {
+        left: 0;
+        bottom: auto;
+        right: auto;
+        top: 0;
+        height: 1px;
+        width: 100%;
+        transform-origin: 50% 0%;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+          transform: scaleY(0.5);
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+          transform: scaleY(0.33);
+        }
+      }
+    }
+  }
+}
+
+@mixin hairline-color($position, $color) {
+  @if ($position == left or $position == top) {
+    &:after {
+      background-color: $color;
+    }
+  } @else if ($position == right or $position == bottom) {
+    &:before {
+      background-color: $color;
+    }
+  }
+}
+
+// Encoded SVG Background
+@mixin encoded-svg-background($svg) {
+  background-image: url("data:image/svg+xml;charset=utf-8,#{$svg}");
+}
+
+@mixin breakpoint ($point) {
+  $break-small: 320px;
+  $break-large: 1024px;
+  @if ($point == small-screen) {
+    @media only screen and (max-width: $break-small) { @content; }
+  } @else if ($point == medium-screen) {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+      @content;
+    }
+  } @else if ($point == large-screen) {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}

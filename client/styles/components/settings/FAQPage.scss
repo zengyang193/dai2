@@ -1,0 +1,54 @@
+@import 'include/flexbox';
+
+.faq-container {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: -15px;
+    margin-top: 0;
+  }
+  .faq-item {
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #f7f7f7;
+    .faq-question {
+      color: #333;
+      font-size: 15px;
+      height: 55px;
+      display: flex;
+      background-color: white;
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(space-between);
+      @include flex-wrap(nowrap);
+      .faq-question-content {
+        display: block; /*内联对象需加*/
+        word-break: keep-all; /* 不换行 */
+        white-space: nowrap; /* 不换行 */
+        overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+        text-overflow: ellipsis;
+        margin-left: 17px;
+        margin-right: 40px;
+      }
+      .faq-chevron {
+        margin-right: 12px;
+        color: #999;
+      }
+    }
+
+    .faq-asked {
+      color: #666;
+      font-size: 13px;
+      margin-left: 20px;
+      margin-right: 35px;
+      margin-top: 10px;
+      padding-bottom: 15px;
+      line-height: normal;
+      display: block;
+    }
+    .faq-asked-none {
+      display: none;
+    }
+
+  }
+
+}

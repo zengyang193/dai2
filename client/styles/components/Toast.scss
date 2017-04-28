@@ -1,0 +1,37 @@
+.react-toast {
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: auto;
+  position: absolute;
+  z-index: 11000;
+  //left: 50%;
+  margin-top: 0;
+  top: 50%;
+  text-align: center;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, .8);
+  padding: 0 .8rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translate3d(0,0,0) scale(1.185);
+  transition-property: transform, opacity;
+  color: white;
+  display: none;
+
+  &.react-toast-in {
+    opacity: 1;
+    transition-duration: 400ms;
+    transform: translate3d(0,0,0) scale(1);
+  }
+
+  &.react-toast-out {
+    opacity: 0;
+    z-index: 11000-1;
+    transition-duration: 400ms;
+    transform: translate3d(0,0,0) scale(0.815);
+  }
+}

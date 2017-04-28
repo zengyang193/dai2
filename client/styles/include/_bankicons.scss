@@ -1,0 +1,242 @@
+@mixin ico-bank($x){
+    float: left;
+    width: 25px*$x;
+    height: 25px*$x;
+    margin: 0 0 0 2px;
+    background-image: url('~images/banklgs.png');
+    background-size: 50px*$x;
+
+    &.bk-logo-1{
+        background-position:0 -25px*$x;
+    }
+    &.bk-logo-2{
+        background-position:0 -50px*$x;
+    }
+    &.bk-logo-3{
+        background-position:0 -75px*$x;
+    }
+    &.bk-logo-4{
+        background-position:0 -100px*$x;
+    }
+    &.bk-logo-5{
+        background-position:0 -125px*$x;
+    }
+    &.bk-logo-6{
+        background-position:0 -150px*$x;
+    }
+    &.bk-logo-7{
+        background-position:0 -175px*$x;
+    }
+    &.bk-logo-8{
+        background-position:0 -200px*$x;
+    }
+    &.bk-logo-9{
+        background-position:0 -225px*$x;
+    }
+    &.bk-logo-10{
+        background-position:0 -250px*$x;
+    }
+    &.bk-logo-11{
+        background-position:0 -275px*$x;
+    }
+    &.bk-logo-12{
+        background-position:0 -300px*$x;
+    }
+    &.bk-logo-13{
+        background-position:0 -325px*$x;
+    }
+    &.bk-logo-14{
+        background-position:0 -350px*$x;
+    }
+    &.bk-logo-15{
+        background-position:0 -375px*$x;
+    }
+    &.bk-logo-16{
+        background-position:0 -400px*$x;
+    }
+    &.bk-logo-17{
+        background-position:0 -425px*$x;
+    }
+    &.bk-logo-18{
+        background-position:0 -450px*$x;
+    }
+    &.bk-logo-19{
+        background-position:0 -475px*$x;
+    }
+    &.bk-logo-20{
+        background-position:0 -500px*$x;
+    }
+    &.bk-logo-21{
+        background-position:0 -525px*$x;
+    }
+    &.bk-logo-22{
+        background-position:0 -550px*$x;
+    }
+    &.bk-logo-20{
+        background-position:0 -575px*$x;
+    }
+    &.bk-logo-21{
+        background-position:0 -600px*$x;
+    }
+    &.bk-logo-22{
+        background-position:0 -550px*$x;
+    }
+    &.bk-logo-23{
+        background-position:0 -650px*$x;
+    }
+    &.bk-logo-24{
+        background-position:0 -675px*$x;
+    }
+    &.bk-logo-25{
+        background-position:0 -700px*$x;
+    }
+    &.bk-logo-26{
+        background-position:0 -725px*$x;
+    }
+    &.bk-logo-27{
+        background-position:0 -750px*$x;
+    }
+    &.bk-logo-31{
+        background-position:0 -775px*$x;
+    }
+    &.bk-logo-32{
+        background-position:0 -800px*$x;
+    }
+    &.bk-logo-33{
+        background-position:0 -725px*$x;
+    }
+    &.bk-logo-34{
+        background-position:0 -850px*$x;
+    }
+    &.bk-logo-35{
+        background-position:0 -875px*$x;
+    }
+    &.bk-logo-36{
+        background-position:0 -900px*$x;
+    }
+    &.bk-logo-37{
+        background-position:0 -825px*$x;
+    }
+    &.bk-logo-38{
+        background-position:0 -950px*$x;
+    }
+    &.bk-logo-39{
+        background-position:0 -975px*$x;
+    }
+    &.bk-logo-40{
+        background-position:0 -900px*$x;
+    }
+    &.bk-logo-41{
+        background-position:0 -1025px*$x;
+    }
+    &.bk-logo-42{
+        background-position:0 -1050px*$x;
+    }
+    &.bk-logo-43{
+        background-position:0 -950px*$x;
+    }
+    &.bk-logo-44{
+        background-position:0 -1100px*$x;
+    }
+    &.bk-logo-45{
+        background-position:0 -1125px*$x;
+    }
+    &.bk-logo-46{
+        background-position:0 -1150px*$x;
+    }
+    &.bk-logo-47{
+        background-position:0 -1275px*$x;
+    }
+    &.bk-logo-48{
+        background-position:0 -1200px*$x;
+    }
+    &.bk-logo-49{
+        background-position:0 -1225px*$x;
+    }
+    &.bk-logo-52{
+        background-position:0 -1075px*$x;
+    }
+    &.bk-logo-54{
+        background-position:0 -1225px*$x;
+    }
+    &.bk-logo-55{
+        background-position:0 -1400px*$x;
+    }
+    &.bk-logo-56{
+        background-position:0 -1425px*$x;
+    }
+    &.bk-logo-58{
+        background-position:0 -1375px*$x;
+    }
+    &.bk-logo-61{
+        background-position:0 -1300px*$x;
+    }
+    &.bk-logo-62{
+        background-position:0 -1325px*$x;
+    }
+    &.bk-logo-63{
+        background-position:0 -1350px*$x;
+    }
+    &.bk-logo-73{
+        background-position:0 -1450px*$x;
+    }
+    &.bk-logo-53{
+        background-position:0 -1050px*$x;
+    }
+    &.bk-logo-65{
+        background-position:0 -1475px*$x;
+    }
+    &.bk-logo-71{
+        background-position:0 -1500px*$x;
+    }
+    &.bk-logo-75{
+        background-position:0 -1525px*$x;
+    }
+    &.bk-logo-79{
+        background-position:0 -1550px*$x;
+    }
+    &.bk-logo-70{
+        background-position:0 -1575px*$x;
+    }
+    &.bk-logo-74{
+        background-position:0 -1600px*$x;
+    }
+    &.bk-logo-64{
+        background-position:0 -1625px*$x;
+    }
+    &.bk-logo-68{
+        background-position:0 -1650px*$x;
+    }
+    &.bk-logo-67{
+        background-position:0 -1675px*$x;
+    }
+    &.bk-logo-69{
+        background-position:0 -1700px*$x;
+    }
+    &.bk-logo-76{
+        background-position:0 -1725px*$x;
+    }
+    &.bk-logo-50{
+        background-position:0 -1125px*$x;
+    }
+    &.bk-logo-81{
+        background-position:0 -1800px*$x;
+    }
+    &.bk-logo-zx{
+        background-position:0 -1825px*$x;
+    }
+    &.bk-logo-82{
+        background-position:0 -1850px*$x;
+    }
+    &.bk-logo-83{
+        background-position:0 -1875px*$x;
+    }
+}
+
+.ico-bank{
+    @include ico-bank(1);
+}
+
+.ico-bank-lg{
+    @include ico-bank(1.6);
+}

@@ -1,0 +1,374 @@
+@import 'include/flexbox';
+@import 'include/mixins';
+@import 'kxd_font_icons';
+@import 'include/bankicons';
+
+.page-home {
+  .toolbar + .page__background + .page__content {
+    top: 0;
+  }
+
+  .toolbar-button {
+    color: #fff;
+  }
+
+  .loan-container {
+    padding-top: 44px;
+    overflow: hidden;
+    color: #fff;
+    background-image: url('~images/home_banner.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  .loan-amount-wrapper {
+    margin: 40px 0 60px;
+    text-align: center;
+
+    @include breakpoint(small-screen) {
+      margin: 20px 0 30px;
+    }
+  }
+
+  .loan-amount {
+    position: relative;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+
+    &:before {
+      content: '贷款金额';
+      right: 100%;
+      margin-right: 5px;
+      text-align: right;
+    }
+
+    &:after {
+      content: '元';
+      left: 100%;
+      margin-left: 5px;
+      text-align: left;
+    }
+
+    &:before, &:after {
+      display: inline-block;
+      position: absolute;
+      bottom: 5px;
+      width: 100px;
+      line-height: 15px;
+      font-size: 15px;
+    }
+  }
+
+  .loan-predict {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include breakpoint(small-screen) {
+      margin: -10px auto 20px;
+    }
+
+    margin: -20px auto 20px;
+
+    .predict-item {
+      @include flex;
+      @include hairline(left, #fff);
+
+      position: relative;
+      margin-left: -1px;
+      text-align: center;
+    }
+
+    .item-label {
+      margin: 5px auto;
+      font-size: 12px;
+      line-height: 12px;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      i {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+        font-size: 1.1em;
+      }
+    }
+
+    .item-value {
+      margin: 5px auto;
+      font-size: 15px;
+
+      .amount {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .loan-form {
+    display: block;
+    margin: 0;
+    padding: 0 25px;
+    font-size: 15px;
+    color: #666;
+    overflow: hidden;
+
+    .button-apply {
+      margin-top: 45px;
+      font-size: 22px;
+    }
+  }
+
+  .form-field-title {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .form-switch-wrapper {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    position: relative;
+    height: 42px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    background-color: #ddd;
+    color: #bebebe;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+
+    .switch-item {
+      @include flex;
+      text-align: center;
+      font-weight: 500;
+      z-index: 1;
+
+      &.active {
+        color: #fff;
+      }
+    }
+
+    .switch-item-overlay, .switch-clickable-overlay {
+      position: absolute;
+      top: -1px;
+      width: 50%;
+      height: 44px;
+    }
+
+    .switch-item-overlay {
+      border-radius: 22px;
+      background: linear-gradient(90deg, #ff453c, #db302e);
+      z-index: 0;
+      transition: left 300ms;
+    }
+
+    .switch-clickable-overlay {
+      z-index: 2;
+    }
+
+    .amount {
+      font-size: 24px;
+    }
+
+    .limit-exceeded {
+      position: absolute;
+      left: 55%;
+      bottom: 3px;
+      width: 50px;
+      height: 50px;
+      background-image: url('~images/limit_exceeded.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      z-index: 2;
+    }
+  }
+
+  :not(ons-toolbar-button) > .ons-icon--ion {
+    line-height: 1em;
+    vertical-align: inherit;
+  }
+
+  .product-loading-container {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .product-loading {
+    margin: 60px auto;
+  }
+  .bank-container {
+    margin-top: 13px;
+    color: #333;
+    font-size: 15px;
+    text-align: center;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    .bankcardimg {
+      display: inline-table;
+      transform: scaleX(0.5) scaleY(0.5);
+      -ms-transform: scaleX(0.5) scaleY(0.5);
+      -moz-transform: scaleX(0.5) scaleY(0.5);
+      -webkit-transform: scaleX(0.5) scaleY(0.5);
+      -o-transform: scaleX(0.5) scaleY(0.5);
+    }
+  }
+}
+
+@mixin colorize-loan-status ($color) {
+  .loan-order-tip strong {
+    color: $color;
+  }
+
+  .loan-order-status {
+    color: $color;
+
+    .progress-circular__primary {
+      stroke: $color;
+    }
+
+    .progress-circular__secondary {
+      stroke: lighten($color, 30%);
+    }
+  }
+}
+
+.loan-order-info {
+  $reviewing-color: #2a66c9;
+  $passed-color: #15b0a3;
+  $rejected-color: #5a5a5a;
+  $repayable-color: #ffa800;
+  $overdue-color: #db302e;
+
+  text-align: center;
+  overflow: hidden;
+
+  &.reviewing { @include colorize-loan-status($reviewing-color); }
+  &.passed { @include colorize-loan-status($passed-color); }
+  &.rejected { @include colorize-loan-status($rejected-color); }
+  &.repayable { @include colorize-loan-status($repayable-color); }
+  &.overdue { @include colorize-loan-status($overdue-color); }
+
+  .order-progress-circular {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto 10px;
+
+    .progress-circular__primary {
+      stroke: #15b0a3;
+      stroke-width: 3%;
+    }
+    .progress-circular__secondary {
+      stroke: rgb(158, 228, 217);
+      stroke-width: 3%;
+    }
+  }
+
+  .loan-order-detail {
+    font-size: 15px;
+    margin-top: 20px;
+
+    @include breakpoint(small-screen) {
+      font-size: 13px;
+    }
+
+    strong {
+      color: #db302e;
+      margin: 0 4px;
+    }
+  }
+
+  .loan-order-tip {
+    strong {
+      font-size: 20px;
+    }
+  }
+
+  .loan-order-status {
+    position: relative;
+  }
+
+  .loan-order-action {
+    margin-top: 20px;
+    padding: 0 30px;
+
+    .button.button--large {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .loan-order-agreement {
+    margin-top: 15px;
+  }
+
+  .button-agreement {
+    color: $reviewing-color;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .button-loan-action {
+    border-radius: 20px;
+    padding: 2px 18px;
+  }
+
+  .status-icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    .status-icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 60px;
+      margin-top: -40px;
+      line-height: 60px;
+      font-size: 60px;
+    }
+
+    .status-text {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 18px;
+      line-height: 18px;
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 500px;
+    }
+  }
+}
+
+.order-application-dialog,
+.limit-exceeded-dialog,
+.repayment-notification-dialog {
+  .alert-dialog-footer {
+    display: block;
+  }
+
+  .alert-dialog-content {
+    text-align: left;
+  }
+
+  .alert-dialog-button {
+    background-image: linear-gradient(180deg, #ddd, #ddd 50%, rgba(0, 0, 0, 0) 50%);
+  }
+}

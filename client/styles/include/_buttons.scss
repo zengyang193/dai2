@@ -1,0 +1,35 @@
+@mixin button-variant($color, $color-active) {
+    border-color: $color;
+    color: $color;
+    &:active {
+        border-color: $color-active;
+        color: $color-active;
+    }
+    &.button-fill {
+      color: white;
+      background-color: $color;
+      &:active {
+        background-color: $color-active;
+      }
+    }
+}
+
+@mixin button-themes() {
+  &.button-light {
+    @include button-variant($color-text-gray-light, $color-primary-active);
+    color: $color-text-secondary;
+  }
+  &.button-dark {
+    @include button-variant(#6e727b, $color-primary-active);
+    color: $color-text-secondary;
+  }
+  &.button-success {
+    @include button-variant($color-success, $color-success-active);
+  }
+  &.button-danger {
+    @include button-variant($color-danger, $color-danger-active);
+  }
+  &.button-warning {
+    @include button-variant($color-warning, $color-warning-active);
+  }
+}

@@ -1,0 +1,217 @@
+@import 'include/flexbox';
+
+.alert-dialog-wechat {
+  .alert-dialog-title {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .alert-mfooter {
+    @include flexbox;
+    @include flex-wrap(nowrap);
+    .alert-dialog-button {
+      color: #9b9b9b;
+    }
+    .alert-dialog-right {
+      border-left: 1px solid #dcdcdc;
+      color: #7183e2;
+    }
+  }
+}
+
+
+
+.page-settings {
+  background-color: #f8fbfa;
+
+  .toolbar-button {
+    color: #fff;
+  }
+
+  .settings-container {
+    background-color: #f8fbfa;
+    min-height: 274px;
+    color: #fff;
+    background-size: auto 100%;
+    height: 100%;
+    text-align: center;
+    .empty-content{
+      height: 100%;
+      padding-top: 50%;
+      color: #666;
+    }
+    .bg_about_us {
+      margin-top: 87px;
+      width: 225px;
+      height: 150px;
+      display: inline-table;
+      background-size: 100% 100%;
+      background-image: url(~images/settings/bg_about_us_logo.png);
+    }
+    .bg_about_us_word {
+      margin-top: 72px;
+      display: inline-table;
+      width: 275px;
+      height: 95px;
+      background-size: 100% 100%;
+      background-image: url(~images/settings/bg_about_us_word.png);
+    }
+    .about_us_copyright {
+      color: #db2d2f;
+      position: absolute;
+      bottom: 50px;
+      font-size: 13px;
+      width: 100%;
+      text-align: center;
+    }
+    .icon_about_us {
+      width: 25px;
+      height: 25px;
+      background-size: 100% 100%;
+      background-image: url(~images/settings/icon_about_us.png);
+    }
+
+    .icon_loan {
+      width: 25px;
+      height: 25px;
+      background-size: 100% 100%;
+      background-image: url(~images/settings/icon_loan.png);
+    }
+
+    .icon_settings {
+      width: 25px;
+      height: 25px;
+      background-size: 100% 100%;
+      background-image: url(~images/settings/icon_settings.png);
+    }
+
+    .icon_wechat {
+      width: 25px;
+      height: 25px;
+      background-size: 100% 100%;
+      background-image: url(~images/settings/icon_wechat.png);
+    }
+
+    .list-item-underline {
+      &:before {
+        background: none;
+      }
+
+      .list-item__center {
+        background-image: none;
+      }
+    }
+
+    .list-item-underline {
+      border-bottom: 1px solid #e3e6e5;
+    }
+    .list-item-topline {
+      border-top: 1px solid #e3e6e5;
+    }
+
+    .loan-item {
+      min-height: 55px;
+      .loan-amount {
+        width: 100%;
+        font-size: 17px;
+        color: #333;
+        margin-left: -4px;
+      }
+      .loan-time {
+        font-size: 13px;
+        color: #999;
+      }
+      .loan-ing {
+        font-size: 17px;
+        color: #15b0a3;
+      }
+      .loan-finish {
+        font-size: 17px;
+        color: #cccccc;
+      }
+
+    }
+    .my-settings-item {
+      min-height: 55px;
+      font-size: 15px;
+      color: #333333;
+      .right-word {
+        color: #dc3f3f;
+        font-size: 15px;
+      }
+    }
+
+    .user-info {
+      background: linear-gradient(90deg, #ff453c, #db302e);
+      padding: 40px 40px 20px;
+
+      .user-phone {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+
+      .user-id {
+        color: #ffffff;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+
+
+  }
+
+  .user-logout {
+    width: 80%;
+    bottom: 80px;
+    margin-left: 10%;
+    position: absolute;
+  }
+
+  .wx-modal {
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+    margin: 5%;
+    span {
+      background: white;
+      display: block;
+      color: #333333;
+      padding: 0.5rem;
+      font-size: 17px;
+      border-radius: 5px 5px 0 0;
+    }
+    .service-time{
+      color: #646464;
+      font-size: 13px;
+    }
+    .show_bottom {
+      @include flexbox;
+      @include flex-wrap(nowrap);
+      background-color: #ffffff;
+      border-radius: 0 0 5px 5px;
+      color: #696969;
+      border-top:1px solid #e5e5e5;
+      padding: 10px;
+      @include justify-content(space-between);
+      @include align-items(center);
+      .right-word{
+        @include flexbox;
+        @include align-items(center);
+      }
+      .icon_wechat{
+        width: 36px;
+        height:36px;
+        background-size: 100% 100%;
+        background-image: url(~images/settings/icon_wechat2.png);
+      }
+    }
+    .span-cancle{
+      color: #6e86e1;
+      font-size: 18px;
+      border-radius: 5px;
+      margin-top: 5%;
+    }
+  }
+
+}

@@ -1,0 +1,112 @@
+@import 'include/flexbox';
+@import 'include/mixins';
+
+$primary-color: #db302e;
+$primary-color-light: #ff453c;
+
+.page__background {
+  background-color: #fff;
+}
+
+.list--noborder .list-item {
+  margin: 0;
+}
+
+.list__form {
+  .list__item__center {
+    @include flexbox;
+    @include justify-content(space-between);
+  }
+
+  .form__label {
+    width: 90px;
+  }
+
+  .form__control {
+    @include flex;
+
+    height: 55px;
+    margin: -12px 0;
+    font-size: 15px;
+    background: transparent;
+    outline: none;
+    border: none;
+
+    .text-input__container, .text-input {
+      height: 100%;
+    }
+  }
+
+  select {
+    appearance: none;
+    border: none;
+    background: none;
+  }
+
+  @include breakpoint(small-screen) {
+    select.form__control {
+      max-width: 192px;
+    }
+  }
+}
+
+.button {
+  background-color: $primary-color;
+
+  &:active {
+    background-color: lighten($primary-color, 30%);
+  }
+}
+
+.button--large {
+  border-radius: 22px;
+  background: linear-gradient(90deg, $primary-color-light, $primary-color);
+}
+
+.button--outline {
+  color: $primary-color;
+  background-color: #fff;
+  border: 1px solid $primary-color;
+
+  &:active {
+    background-color: lighten($primary-color, 30%);
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    opacity: 1;
+  }
+}
+
+.toolbar {
+  background: linear-gradient(90deg, $primary-color-light, $primary-color);
+
+  &.toolbar--transparent {
+    background: transparent;
+  }
+
+  .toolbar-button {
+    color: #fff;
+  }
+
+  .toolbar__title {
+    color: #fff;
+  }
+}
+
+.progress-circular {
+  .progress-circular__primary {
+    stroke: $primary-color;
+  }
+
+  .progress-circular__secondary {
+    stroke: transparent;
+  }
+}
+
+:checked + .tabbar__button {
+  color: $primary-color;
+}
+
+.content__block {
+  padding: 14px;
+  margin: 20px auto;
+}

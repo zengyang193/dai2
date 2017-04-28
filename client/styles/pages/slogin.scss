@@ -1,0 +1,64 @@
+@import 'include/flexbox';
+
+.page-slogin {
+  .list-form-login {
+    margin-top: 40px;
+  }
+
+  .login-tip {
+    margin-top: 10px;
+    color: #fe3132;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .form-captcha-container {
+    width: 120px;
+    text-align: center;
+
+    .captcha-loading {
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+    }
+  }
+
+  .form-captcha-image {
+    width: 100%;
+    height: 46px;
+    margin: -12px 0;
+  }
+
+  .button-reset-pwd {
+    margin-right: 6px;
+    padding: 2px 8px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .button-plain {
+    display: inline-block;
+    color: #0082d4;
+    text-decoration: none;
+    font-size: 15px;
+
+    &.disabled {
+      color: #999;
+    }
+  }
+}
+
+.page-resetpwd-bj {
+  .button-bar {
+    width: 280px;
+    margin: 20px auto;
+  }
+
+  .segment {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
